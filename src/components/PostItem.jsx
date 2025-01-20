@@ -1,7 +1,10 @@
 import React from 'react';
 import { MyButton } from './UI/button/MyButton';
+import { useNavigate } from 'react-router-dom';
 
 const PostItem = React.forwardRef((props, ref) => {
+  const navigate = useNavigate();
+
   return (
     <div className="post" ref={ref}>
       <div className="post__content">
@@ -11,6 +14,9 @@ const PostItem = React.forwardRef((props, ref) => {
         <div>{props.post.body}</div>
       </div>
       <div className="post__btns">
+        <MyButton onClick={() => navigate(`/posts/${props.post.id}`)}>
+          Открыть
+        </MyButton>
         <MyButton
           onClick={() => {
             debugger;
