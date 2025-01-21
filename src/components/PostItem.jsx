@@ -19,7 +19,6 @@ const PostItem = React.forwardRef((props, ref) => {
         </MyButton>
         <MyButton
           onClick={() => {
-            debugger;
             return props.remove(props.post);
           }}>
           Удалить
