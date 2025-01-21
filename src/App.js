@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
-  const [isLoading, setLoading] = useEffect(true);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem('auth')) setIsAuth(true);
